@@ -4,13 +4,13 @@
 .pnp.js
 
 # testing
-./coverage
+coverage/
 
 # production
 /build
 
 # misc
-public
+public/
 .DS_Store
 .env.local
 .env.development.local
