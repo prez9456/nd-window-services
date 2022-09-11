@@ -1,10 +1,11 @@
-import Tabs from "./sites/Tabs";
-import './App.css';
+import Nav from "./components/Nav";
+import './style/App.css';
+import React from "react";
 
-function App() {
+const App = () => {
     return(
         <div className="App">
-            <Tabs />
+            <Nav/>
         </div>
     )
 }

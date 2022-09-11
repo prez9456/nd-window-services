@@ -1,9 +1,8 @@
 import React from "react";
-import { render } from "react-dom";
 
 const Home = () => {
     return(
-        <div className="Home">
+        <div>
             <p>This is the HOME tab</p>
         </div>
     )
