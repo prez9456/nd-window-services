@@ -16,20 +16,23 @@ const Nav = () => {
   const [value, setValue] = React.useState(0);
 
   return (
+    <>
+      <Home/>
+    
     <NavBox>
       <BottomNav
         showLabels
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);
-          console.log(newValue)
         }}
-      >
+        >
         <NavButton label="Home" leftbtn={'30px'} icon={<HomeRoundedIcon />} />
         <NavButton label="About" icon={<InfoSharpIcon />} />
         <NavButton label="Contact" rightbtn={'30px'} icon={<EmailRoundedIcon />} />
       </BottomNav>
     </NavBox>
+    </>
   );
 }
 
