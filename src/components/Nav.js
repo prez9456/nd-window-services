@@ -1,7 +1,4 @@
 import * as React from 'react';
-// import Home from '../pages/home';
-// import About from '../pages/about';
-// import Contact from '../pages/contact';
 
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
@@ -12,7 +9,6 @@ import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import InfoSharpIcon from '@mui/icons-material/InfoSharp';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 import { Link, Outlet } from 'react-router-dom';
-
 
 const Nav = () => {
   const [value, setValue] = React.useState(0);
@@ -31,9 +27,7 @@ const Nav = () => {
           <Link to='About'><NavButton label="About" icon={<InfoSharpIcon />}/></Link>
           <Link to='Contact'><NavButton label="Contact" rightbtn={'30px'} icon={<EmailRoundedIcon />} /></Link>
         </BottomNav>
-        {/* <Link to={page}/> */}
       </NavBox>     
-    
     </>  
   );
 }
