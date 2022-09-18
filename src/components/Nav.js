@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Home from '../pages/Home';
-import About from '../pages/About';
-import Contact from '../pages/Contact'
+// import Home from '../pages/home';
+// import About from '../pages/about';
+// import Contact from '../pages/contact';
 
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
@@ -11,28 +11,30 @@ import styled from '@emotion/styled';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import InfoSharpIcon from '@mui/icons-material/InfoSharp';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
+import { Link, Outlet } from 'react-router-dom';
+
 
 const Nav = () => {
   const [value, setValue] = React.useState(0);
-
-  return (
+  return (    
     <>
-      <Home/>
-    
+    <Outlet/>
     <NavBox>
-      <BottomNav
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-        >
-        <NavButton label="Home" leftbtn={'30px'} icon={<HomeRoundedIcon />} />
-        <NavButton label="About" icon={<InfoSharpIcon />} />
-        <NavButton label="Contact" rightbtn={'30px'} icon={<EmailRoundedIcon />} />
-      </BottomNav>
-    </NavBox>
-    </>
+        <BottomNav
+          showLabels
+          value={value}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+          >
+          <Link to='/'><NavButton label="Home" leftbtn={'30px'} icon={<HomeRoundedIcon />}/></Link>
+          <Link to='About'><NavButton label="About" icon={<InfoSharpIcon />}/></Link>
+          <Link to='Contact'><NavButton label="Contact" rightbtn={'30px'} icon={<EmailRoundedIcon />} /></Link>
+        </BottomNav>
+        {/* <Link to={page}/> */}
+      </NavBox>     
+    
+    </>  
   );
 }
 
